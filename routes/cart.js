@@ -3,7 +3,7 @@ const router = express.Router();
 const expressLayouts = require('express-ejs-layouts');
 
 router.get('/', (req,res) => {
-    res.render('index')
+    res.render('cart')
 });
 
 module.exports = router;
