@@ -6,7 +6,7 @@ exports.addSub = (req, res, next) => {
         ...req.body
     })
     sub.save()
-    .then(() => res.status(200).json({ subscribed }))
+    .then(() => res.status(200).redirect('/'))
     .catch(error => res.status(400).json({ error }));
 };
 

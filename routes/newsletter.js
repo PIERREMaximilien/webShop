@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const expressLayouts = require('express-ejs-layouts');
-const newsletter = require('../controller/newsletter');
+const newsletterControler = require('../controler/newsletter');
 
-router.post('/', newsletter.addSub);
+router.post('/', newsletterControler.addSub);
 
 module.exports = router;
