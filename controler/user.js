@@ -2,7 +2,7 @@ const express = require('express');
 const User = require('../models/user.js');
 const bcrypt = require('bcrypt');
 
-exports.signUpPage = (req, res, next) => {
+exports.signUpPage = (req, res) => {
     res.render('signUp')
 };
 
@@ -14,7 +14,7 @@ exports.signOutPage = (req, res) => {
     res.render('signOut')
 }
 
-exports.createUser = async(req, res) => {
+exports.createUser = async (req, res) => {
     let user = await User.findOne({ email: req.body.email });
     if (user) {
         return res.status(400).send('That user already exisits!');
